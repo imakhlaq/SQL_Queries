@@ -45,7 +45,22 @@ It will select everything from the table.
 # CREATE TABLE {tableName}(
 
              {colum name} {type} {constrants}
-                               __________________ constrants
-               id      Integer primarykey notnull,
-               name    varchar(100) unique notnull,
+                               __________________ constraints
+               id      Integer primarykey NOT NULL,
+               name    varchar(100) UNIQUE NOT NULL,
               address  varchar(250)      );
+
+constraints =>
+
+default("user") : use to give default value to the colum
+
+#Enum type
+DB's support enums too.
+
+{colum name} {Type}
+gender ENUM("male","female")  //this is type of colums
+
+# SELECT name,age FROM students WHERE {any condition}
+
+By using where clause you can manipulate data based on certain condition. U can also have multiple condition separated
+by AND,OR,NOT etc. (just like the condition in if checks)
