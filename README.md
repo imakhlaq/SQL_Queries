@@ -16,13 +16,18 @@ To show all the table.In a selected database.
 
 To create a database.
 
-# CREATE TABLE {tableName}(
+# CREATE TABLE
 
-             {colum name} {type} {constrants}
+```
+CREATE TABLE {tableName}(
 
-               id      Integer primarykey,
-               name    varchar(100),
-              address  varchar(250)      );
+{colum name} {type} {constrants}
+
+    id      Integer primarykey,
+    name    varchar(100),
+   address  varchar(250)     
+ );
+```
 
 It will create a table.
 
