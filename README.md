@@ -18,15 +18,29 @@ To create a database.
 
 # CREATE TABLE
 
-```
-CREATE TABLE {tableName}(
+```postgresql
+CREATE TABLE {tableName}
+(
 
-{colum name} {type} {constrants}
+    {
+    colum
+    name} {
+    type} {
+    constrants}
 
-    id      Integer primarykey,
-    name    varchar(100),
-   address  varchar(250)     
- );
+    id
+    Integer
+    primarykey,
+    name
+    varchar
+(
+    100
+),
+    address varchar
+(
+    250
+)
+    );
 ```
 
 It will create a table.
@@ -37,8 +51,9 @@ It will show description of a table
 
 # INSERT DATA
 
-```
-INSERT INTO TABLE {name} (id,name,address) VALUES(1,"Akhlaq Ahmad","kareli Ald")
+```postgresql
+INSERT INTO TABLE {name} (id, name, address)
+VALUES (1, "Akhlaq Ahmad", "kareli Ald")
 ```
 
 Mapping will happen base on the column and value numbers. eg id=1
@@ -53,15 +68,32 @@ It will select everything from the table.
 
 # TABLE CONSTRAINTS
 
-```
-CREATE TABLE {tableName}(
+```postgresql
+CREATE TABLE {tableName}
+(
 
-             {colum name} {type} {constrants}
-                               __________________ constraints
-               id      Integer primarykey NOT NULL,
-               name    varchar(100) UNIQUE NOT NULL,
-              address  varchar(250)     
-               );
+    {
+    colum
+    name} {
+    type} {
+    constrants}
+    __________________
+    constraints
+    id
+    Integer
+    primarykey
+    NOT
+    NULL,
+    name
+    varchar
+(
+    100
+) UNIQUE NOT NULL,
+    address varchar
+(
+    250
+)
+    );
 ```
 
 constraints =>
@@ -77,8 +109,10 @@ gender ENUM("male","female")  //this is type of colums
 
 # WHERE CLAUSE
 
-```
-SELECT name,age FROM students WHERE {any condition}
+```postgresql
+SELECT name, age
+FROM students
+WHERE {any condition}
 ```
 
 By using where clause you can manipulate data based on certain condition. U can also have multiple condition separated
@@ -86,20 +120,42 @@ by AND,OR,NOT etc. (just like the condition in if checks)
 
 # LIKE
 
-```
-SELECT name FROM table WHERE name LIKE "%2"
+```postgresql
+SELECT name
+FROM table
+WHERE name LIKE "%2"
 ```
 
 It will select name where it will end with 2.
 
-```
-SELECT name FROM table WHERE name LIKE "2%"
+```postgresql
+SELECT name
+FROM table
+WHERE name LIKE "2%"
 ```
 
 It will select name where it will start with 2.
 
-```
-SELECT name FROM table WHERE name LIKE "%2%"
+```postgresql
+SELECT name
+FROM table
+WHERE name LIKE "%2%"
 ```
 
 It will select name where 2 can be anywhere.
+
+```postgresql
+SELECT name
+FROM table
+WHERE name LIKE "_2%"
+```
+
+It will select name where 2 is the second character.
+
+# OR
+
+```postgresql
+SELECT *
+FROM table
+WHERE {conditon 1} OR {conditon 2}
+```
