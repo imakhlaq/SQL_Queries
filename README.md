@@ -276,3 +276,14 @@ LIMIT 10 OFFSET 5;
 ```
 
 It will leave first 5 results and consider only the next 10 after that.
+
+* Q=> select 2 employs with minimal salary in reverse name order(Z->A) and
+  age <= 20?
+
+```postgresql
+SELECT *
+FROM table
+WHERE age <= 20
+ORDER BY salary DESC
+LIMIT 2;
+```
