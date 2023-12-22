@@ -199,12 +199,26 @@ It will select data based on if all the condition is fulfilled.
 
 ## RELATIONAL OPERATORS
 
+### ">"
+
 ```postgresql
 SELECT *
 FROM table
 WHERE age > 20
    OR status = "active"
    OR {condition 3};
+```
+
+You can use all the relational operators in where clause.
+
+### "<="
+
+```postgresql
+SELECT *
+FROM table
+WHERE age <= 20
+  AND status = "active"
+  AND {condition 3};
 ```
 
 You can use all the relational operators in where clause.
@@ -218,3 +232,47 @@ WHERE NOT gender = "others";
 ```
 
 It will select all the data where gender is not others.
+
+# ORDER
+
+```postgresql
+SELECT *
+FROM table
+ORDER BY name DESC;
+```
+
+It will select the data from table and order it by name in descending manner.
+For ascending replace DESC with AESC.
+
+# LIMIT
+
+```postgresql
+SELECT *
+FROM table
+WHERE location = "allahabad"
+LIMIT 2;
+```
+
+It will limit the result set by only first two rows.
+
+# OFFSET
+
+```postgresql
+SELECT *
+FROM table
+WHERE salary >= 10000
+OFFSET 5;
+```
+
+It will leave the first 5 result and rest will be included in data set.
+
+### LIMIT with OFFSET
+
+```postgresql
+SELECT *
+FROM table
+WHERE location = "deoria"
+LIMIT 10 OFFSET 5;
+```
+
+It will leave first 5 results and consider only the next 10 after that.
