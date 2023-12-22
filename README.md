@@ -51,7 +51,7 @@ It will select the name from the table and show it.
 
 It will select everything from the table.
 
-# CREAT TABLE
+# TABLE CONSTRAINTS
 
 ```
 CREATE TABLE {tableName}(
@@ -75,11 +75,31 @@ DB's support enums too.
 
 gender ENUM("male","female")  //this is type of colums
 
-# SELECT name,age FROM students WHERE {any condition}
+# WHERE CLAUSE
+
+```
+SELECT name,age FROM students WHERE {any condition}
+```
 
 By using where clause you can manipulate data based on certain condition. U can also have multiple condition separated
 by AND,OR,NOT etc. (just like the condition in if checks)
 
-# SELECT name FROM table WHERE name LIKE "%2"
+# LIKE
+
+```
+SELECT name FROM table WHERE name LIKE "%2"
+```
 
 It will select name where it will end with 2.
+
+```
+SELECT name FROM table WHERE name LIKE "2%"
+```
+
+It will select name where it will start with 2.
+
+```
+SELECT name FROM table WHERE name LIKE "%2%"
+```
+
+It will select name where 2 can be anywhere.
