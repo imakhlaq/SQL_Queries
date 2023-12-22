@@ -65,7 +65,7 @@ It will show description of a table
 
 ```postgresql
 INSERT INTO TABLE {name} (id, name, address)
-VALUES (1, "Akhlaq Ahmad", "kareli Ald")
+VALUES (1, "Akhlaq Ahmad", "kareli Ald");
 ```
 
 Mapping will happen base on the column and value numbers. eg id=1
@@ -132,7 +132,7 @@ gender ENUM("male","female")  //this is type of colums
 ```postgresql
 SELECT name, age
 FROM students
-WHERE {any condition}
+WHERE {any condition};
 ```
 
 By using where clause you can manipulate data based on certain condition. U can also have multiple condition separated
@@ -143,7 +143,7 @@ by AND,OR,NOT etc. (just like the condition in if checks)
 ```postgresql
 SELECT name
 FROM table
-WHERE name LIKE "%2"
+WHERE name LIKE "%2";
 ```
 
 It will select name where it will end with 2.
@@ -151,7 +151,7 @@ It will select name where it will end with 2.
 ```postgresql
 SELECT name
 FROM table
-WHERE name LIKE "2%"
+WHERE name LIKE "2%";
 ```
 
 It will select name where it will start with 2.
@@ -159,7 +159,7 @@ It will select name where it will start with 2.
 ```postgresql
 SELECT name
 FROM table
-WHERE name LIKE "%2%"
+WHERE name LIKE "%2%";
 ```
 
 It will select name where 2 can be anywhere.
@@ -167,15 +167,54 @@ It will select name where 2 can be anywhere.
 ```postgresql
 SELECT name
 FROM table
-WHERE name LIKE "_2%"
+WHERE name LIKE "_2%";
 ```
 
 It will select name where 2 is the second character.
 
-# OR
+# OPERATORS
+
+## CONDITIONAL OPERATORS
+
+### OR
 
 ```postgresql
 SELECT *
 FROM table
-WHERE {conditon 1} OR {conditon 2}
+WHERE {conditon 1} OR {conditon 2} OR {condition 3};
 ```
+
+It will select data based on if anyone condition is fulfilled.
+You can also add more or conditions.
+
+### AND
+
+```postgresql
+SELECT *
+FROM table
+WHERE {conditon 1} AND {conditon 2} AND {condition 3};
+```
+
+It will select data based on if all the condition is fulfilled.
+
+## RELATIONAL OPERATORS
+
+```postgresql
+SELECT *
+FROM table
+WHERE age > 20
+   OR status = "active"
+   OR {condition 3};
+```
+
+You can use all the relational operators in where clause.
+
+## NOT OPERATORS
+
+```postgresql
+SELECT *
+FROM table
+WHERE NOT gender = "others";
+```
+
+It will select all the data where gender is not others.
