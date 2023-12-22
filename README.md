@@ -287,3 +287,38 @@ WHERE age <= 20
 ORDER BY salary DESC
 LIMIT 2;
 ```
+
+# DELETE
+
+### DELETE A ROW
+
+```postgresql
+DELETE
+FROM table
+WHERE {condition };
+```
+
+It will delete the table row base on the condition.
+
+```postgresql
+DELETE
+FROM table
+WHERE name LIKE "%e%";
+```
+
+### DElETE A FULL TABLE DATA
+
+```postgresql
+DELETE
+FROM table;
+```
+
+It will delete all data in a table.
+
+# UPDATE
+
+```postgresql
+UPDATE table
+SET {col1= value}, {col2= value}
+WHERE {condition}
+```
