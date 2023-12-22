@@ -30,7 +30,11 @@ It will create a table.
 
 It will show description of a table
 
-# INSERT INTO TABLE {name} (id,name,address) VALUES(1,"Akhlaq Ahmad","kareli Ald")
+# INSERT DATA
+
+```
+INSERT INTO TABLE {name} (id,name,address) VALUES(1,"Akhlaq Ahmad","kareli Ald")
+```
 
 Mapping will happen base on the column and value numbers. eg id=1
 
@@ -42,13 +46,18 @@ It will select the name from the table and show it.
 
 It will select everything from the table.
 
-# CREATE TABLE {tableName}(
+# CREAT TABLE
+
+```
+CREATE TABLE {tableName}(
 
              {colum name} {type} {constrants}
                                __________________ constraints
                id      Integer primarykey NOT NULL,
                name    varchar(100) UNIQUE NOT NULL,
-              address  varchar(250)      );
+              address  varchar(250)     
+               );
+```
 
 constraints =>
 default("user") : use to give default value to the colum
@@ -68,4 +77,4 @@ by AND,OR,NOT etc. (just like the condition in if checks)
 
 # SELECT name FROM table WHERE name LIKE "%2"
 
-It will select name where it will end with 2
+It will select name where it will end with 2.
