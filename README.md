@@ -1,18 +1,30 @@
 # SQL_Queries
 
-# SHOW DATABASES
+# SHOW
+
+```postgresql
+SHOW DATABASES
+```
 
 It will show all the available databases.
 
-# USE {nameOfDatabase}
+```postgresql
+USE {nameOfDatabase}
+```
 
 To select a particular database.
 
-# SHOW TABLES
+```postgresql
+SHOW TABLES
+```
 
 To show all the table.In a selected database.
 
-# CREATE DATABASE {nameOfDatabase}
+# CREATE
+
+```postgresql
+CREATE DATABASE {nameOfDatabase}
+```
 
 To create a database.
 
@@ -58,11 +70,19 @@ VALUES (1, "Akhlaq Ahmad", "kareli Ald")
 
 Mapping will happen base on the column and value numbers. eg id=1
 
-# SELECT name FROM {tableName};
+# SELECT
+
+```postgresql
+SELECT name, address
+FROM {tableName};
+```
 
 It will select the name from the table and show it.
 
-# SELECT * FROM {tableName}
+```postgresql
+SELECT *
+FROM {tableName};
+```
 
 It will select everything from the table.
 
