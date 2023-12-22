@@ -51,16 +51,21 @@ It will select everything from the table.
               address  varchar(250)      );
 
 constraints =>
-
 default("user") : use to give default value to the colum
 
-#Enum type
+# Enum type
+
 DB's support enums too.
 
 {colum name} {Type}
+
 gender ENUM("male","female")  //this is type of colums
 
 # SELECT name,age FROM students WHERE {any condition}
 
 By using where clause you can manipulate data based on certain condition. U can also have multiple condition separated
 by AND,OR,NOT etc. (just like the condition in if checks)
+
+# SELECT name FROM table WHERE name LIKE "%2"
+
+It will select name where it will end with 2
