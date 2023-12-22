@@ -317,8 +317,36 @@ It will delete all data in a table.
 
 # UPDATE
 
+### UPDATE COLUMN
+
 ```postgresql
 UPDATE table
 SET {col1= value}, {col2= value}
-WHERE {condition}
+WHERE {condition};
+```
+
+It will update the colum of a particular table base on the condition.
+
+### ALTER STRUCTURE OF TABLE
+
+#### UPDATE
+
+```postgresql
+ALTER TABLE {tablename} CHANGE {oldcolname} {newcolname} {datatype and constraints};
+```
+
+It will alter the structure of the table. Change column name,data type.
+
+#### ADD
+
+```postgresql
+ALTER TABLE
+    {tablename} ADD {newcolname} {datatype and constraints}};
+```
+
+By using this u can add new columns in the table.
+
+```postgresql
+ALTER TABLE table
+    ADD age varchar(10) default ("230");
 ```
