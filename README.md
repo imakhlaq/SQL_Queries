@@ -374,6 +374,9 @@ FROM table1
 
 It will show the common data between the two tables.
 
+* Means it will take only things that are matched base on the condition
+  and rest is ignored. (only columns from both table that match the condition)
+
 ### OUTER JOIN
 
 ```postgresql
@@ -383,3 +386,5 @@ FROM table1
 ```
 
 It will show the data that is not common between the two tables.
+
+* Means it will take
