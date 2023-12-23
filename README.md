@@ -350,3 +350,36 @@ By using this u can add new columns in the table.
 ALTER TABLE table
     ADD age varchar(10) default ("230");
 ```
+
+# GROUPBY AND HAVING
+
+```postgresql
+SELECT name, count(name)
+FROM table
+GROUP BY area
+HAVING pincode > 211016;
+```
+
+This will group the table and make a diff table.
+
+# JOINS
+
+### INNER JOIN (default)
+
+```postgresql
+SELECT name, age
+FROM table1
+         INNER JOIN table2 ON {condition};
+```
+
+It will show the common data between the two tables.
+
+### OUTER JOIN
+
+```postgresql
+SELECT name, age
+FROM table1
+         FULL OUTER JOIN table2 ON table1.fr = table2.user_id
+```
+
+It will show the data that is not common between the two tables.
