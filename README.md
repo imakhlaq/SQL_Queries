@@ -77,28 +77,12 @@ It will select everything from the table.
 ```postgresql
 CREATE TABLE {tableName}
 (
-
-    {
-    colum
-    name} {
-    type} {
-    constrants}
-    __________________
-    constraints
-    id
-    Integer
-    primarykey
-    NOT
-    NULL,
-    name
-    varchar
-(
-    100
-) UNIQUE NOT NULL,
-    address varchar
-(
-    250
-)
+    {columname} {type} {constrants}
+                ______________________
+                  constraints
+    id Integer primarykey NOTNULL,
+    name varchar(100) UNIQUE NOT NULL,
+    address varchar(250)
     );
 ```
 
