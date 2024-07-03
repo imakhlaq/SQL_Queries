@@ -347,7 +347,7 @@ It will show the common data between the two tables.
 * Means it will take only things that are matched base on the condition
   and rest is ignored. (only columns from both table that match the condition)
 
-### FULL OUTER JOIN
+### OUTER JOIN
 
 ```postgresql
 SELECT name, age
@@ -367,4 +367,14 @@ FROM table1
          LEFT JOIN table2 ON table.id == table.fr
 ```
 
-Everything will be included from table that is on the left(table1) and only matching 
+Everything will be included from table that is on the left(table1) and only matching from right table. Missing data will be replaced by NULL
+
+### RIGHT JOIN
+
+```postgresql
+SELECT name, id
+FROM table1
+         RIGHT JOIN table2 ON table.id == table.fr
+```
+
+Everything will be included from table that is on the right(table2) and only matching from left table. Missing data will be replaced by NULL
