@@ -33,26 +33,12 @@ To create a database.
 ```postgresql
 CREATE TABLE {tableName}
 (
+    {columname} {type} {constrants}
 
-    {
-    colum
-    name} {
-    type} {
-    constrants}
-
-    id
-    Integer
-    primarykey,
-    name
-    varchar
-(
-    100
-),
-    address varchar
-(
-    250
-)
-    );
+    id Integer primarykey,
+    name varchar(100) NOTNULL,
+    address varchar(250)
+ );
 ```
 
 It will create a table.
